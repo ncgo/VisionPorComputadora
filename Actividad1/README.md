@@ -25,9 +25,9 @@ With the porposed model, it is possible to predict the number of COVID cases on 
 This project also helps us visualize the numbers regarding the current world pandemic.
 
 ## ¿Cómo inicializar el proyecto? / How to get started with this project?
-Asegurese de contar con los paquetes de **requests, bs4, numpy,** y **matplotlib** instalados en su ambiente de desarrollo de Python.
+Asegurese de contar con los paquetes de **requests, bs4, numpy, scikit-learn** y **matplotlib** instalados en su ambiente de desarrollo de Python.
 
-Make sure to have **requests, bs4, numpy,** and **matplotlib** packages installed in your Python environment.
+Make sure to have **requests, bs4, numpy, scikit-learn** and **matplotlib** packages installed in your Python environment.
 
 `$ jupiter notebook`
 
