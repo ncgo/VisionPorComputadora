@@ -1,9 +1,14 @@
 # Actividad Integradora 1
 ## Equipo 1
-David Alonso Cantú Martínez   A00822455
-Jesús Omar Cuenca Espino     A01378844
-Nadia Corina García Orozco    A01242428
-Luis Cossío Ramírez                A011876634
+- David Alonso Cantú Martínez   A00822455
+
+- Jesús Omar Cuenca Espino      A01378844
+
+- Nadia Corina García Orozco    A01242428
+
+- Luis Cossío Ramírez           A011876634
+
+- Fernando Carrillo Mora        A01194204
 
 ---
 
