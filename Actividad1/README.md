@@ -27,7 +27,17 @@ This project also helps us visualize the numbers regarding the current world pan
 ## ¿Cómo inicializar el proyecto? / How to get started with this project?
 Asegurese de contar con los paquetes de **requests, bs4, numpy, scikit-learn** y **matplotlib** instalados en su ambiente de desarrollo de Python.
 
+Todas las dependencias vienen adjuntas en el **requirements.txt**.
+
+Recomendamos tener un *venv* para instalar las dependencias de forma independiente.
+
 Make sure to have **requests, bs4, numpy, scikit-learn** and **matplotlib** packages installed in your Python environment.
+
+All dependencies are attached in the **requirements.txt**.
+
+We do recommend to create a *venv* for this particular proyect in order not to mix dependencies.
+
+`$ pip install -r requirements.txt`
 
 `$ jupiter notebook`
 
