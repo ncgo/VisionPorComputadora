@@ -14,4 +14,5 @@ Repositorio de la clase de Visión Por Computadora del semestre Febrero-Junio de
 
 ## Actividades 
 [Actividad Integradora 1](https://github.com/ncgo/VisionPorComputadora/tree/main/Actividad1)
+[Actividad Integradora 2](https://github.com/ncgo/VisionPorComputadora/tree/main/Actividad2)
 
