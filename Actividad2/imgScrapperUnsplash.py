@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import sys
 import time
-from .fileManager import createFolder,deleteFolder
+from fileManager import createFolder,deleteFolder
 
 WEBSITE_URL = "https://unsplash.com"
 imgURL = []
