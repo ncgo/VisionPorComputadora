@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import sys
 import time
-from fileManager import createFolder,deleteFolder
+from .fileManager import createFolder,deleteFolder
 
 WEBSITE_URL = "https://unsplash.com"
 imgURL = []
@@ -34,7 +34,7 @@ def writeImgs(urls : list, trainPath : str, testPath : str):
         if(x > len(urls) * 0.8):
             targetFolder = testPath
         webImg = requests.get(urls[x])
-        f = open(f"./{targetFolder}img_{x}.png","wb")
+        f = open(f"./{targetFolder}img_{x + 1}.png","wb")
         f.write(webImg.content)
         f.close()
 
