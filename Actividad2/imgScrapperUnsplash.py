@@ -1,7 +1,14 @@
 """
 Escrito por Jesús Omar Cuenca Espino 
 A01378844@itesm.mx
-
+David Alonso Cantú Martínez 
+A00822455@itesm.m
+Nadia Corina García Orozco 
+A01242428@itesm.m
+Luis Cossío Ramírez 
+A011876634@itesm.m
+Fernando Carrillo Mora 
+A01194204@itesm.m
 26/03/2021
 """
 import requests
