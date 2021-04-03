@@ -22,11 +22,31 @@
 ---
 
 ## ¿Qué hace este proyecto? / What does this project do?
+Explorando la técnica de **Web Data Scraping** con la ayuda de la herramienta *Selenium* para recopilar imagenes de una base de datos en línea, se solicita al usuario un término de búsqueda, para después efectuar una consulta en Unsplash. El programa descarga las imágenes arrojadas por la base de datos, donde guarda el 80% de las mismas en la carpeta 
+```
+./train/<término_de_búsqueda>
+``` 
+y el 20% restante en la carpeta 
+```
+./test/<término_de_búsqueda>. 
+```
+Por ejemplo,  si el usuario ingresa el término de búsqueda “dog”, se deben descargar el 80% de las imágenes que arrojó Unsplash en *./train/dog* y el otro 20% en *./test/dog*.
 
+Explroing the **Web Data Scraping Tecnique** with *Selenium* as our helping tool to gather images from an online data base, the user is prompted to type a search term for the program to then perform the query with the keyword on Unsplash. The program then downloads the images returned from the data base saving 80% of the results on the folder
+```
+./train/<search_term>
+``` 
+and the remaining 20% on 
+```
+./test/<search term>. 
+```
 
+For example, if the user were to type *dog* as a search term, 80% of the images returned from Unsplash would be saved on *./train/dog* and the other 20% on *./test/dog*.
 
 ## ¿Por qué es útil este proyecto? / Why is this project useful?
+Este proyecto es util para poder empezar a crear nuestro set de datos para aplicaciones de Visión por Computadora que esperamos continuar aprendiendo a lo largo del curso, haciendo uso de recursos gratuitos en la web.
 
+This project is useful for us to begin creating a base data set for future Computer Vision applications we hope to continue learning throughout the next weeks in the course, using free online resources.
 
 ## ¿Cómo inicializar el proyecto? / How to get started with this project?
 Asegurese de contar con los paquetes de **requests, selenium** y **fileManager** instalados en su ambiente de desarrollo de Python.
