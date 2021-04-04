@@ -49,14 +49,14 @@ Este proyecto es util para poder empezar a crear nuestro set de datos para aplic
 This project is useful for us to begin creating a base data set for future Computer Vision applications we hope to continue learning throughout the next weeks in the course, using free online resources.
 
 ## ¿Cómo inicializar el proyecto? / How to get started with this project?
-Asegurese de contar con los paquetes de **requests, selenium** y **fileManager** instalados en su ambiente de desarrollo de Python.
+Asegurese de contar con los paquetes de **requests** y **selenium** instalados en su ambiente de desarrollo de Python.
 
 Todas las dependencias vienen adjuntas en el **requirements.txt**.
 
 Recomendamos tener un *venv* para instalar las dependencias de forma independiente.
 
 
-Make sure to have **requests, selenium** and **fileManager** packages installed in your Python environment.
+Make sure to have **requests** and **selenium** packages installed in your Python environment.
 
 All dependencies are attached in the **requirements.txt**.
 
@@ -64,7 +64,7 @@ We do recommend to create a *venv* for this particular proyect in order not to m
 
 `$ pip install -r requirements.txt`
 
-`$ jupiter notebook`
+`$ python3 imgScrapperUnsplash.py <Keyword to search> <Number of images to Download ? Defaults to 100>`
 
 ---
 
