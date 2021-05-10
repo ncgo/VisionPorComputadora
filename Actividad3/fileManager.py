@@ -6,7 +6,7 @@ A01378844@itesm.mx
 """
 
 import os
-from shutil import rmtree
+from shutil import rmtree, move
 
 def createFolder(dirName : str):
     try:
@@ -40,7 +40,37 @@ def renameToHexAllFiles():
     for f in range(len(fileNames)):
         newFileName = dirName+f"_{str(hex(f))[2:]}.png"
         os.rename(fileNames[f],newFileName)
-    print(f"{len(fileNames)} where renamed")
+    print(f"{len(fileNames)} were renamed")
+
+def divideIntoFolders():
+    dirName = input("Enter the dirs Name ")
+    files = os.listdir(".")
+    testDir = "test/"+dirName
+    trainDir = "train/"+dirName
+    validDir = "validation/"+dirName
+    createFolder(testDir)
+    createFolder(trainDir)
+    createFolder(validDir)
+    imgFiles = []
+    for f in files:
+        if(".png" in f.lower()):
+            imgFiles.append(f)
+
+    l = len(imgFiles)
+
+    for i in range(round(l*.7)): # 70%
+        f = imgFiles.pop()
+        move(f,trainDir)
+
+    for i in range(round(l*.1)): # 10%
+        f = imgFiles.pop()
+        move(f,validDir)
+
+    while len(imgFiles) > 0: # Everything else
+        f = imgFiles.pop()
+        move(f,testDir)
+    
+    print("All Files Moved")
 
 def originalTestingFunctionality():
     import time
@@ -61,6 +91,7 @@ def originalTestingFunctionality():
     print("Upper Folder Deleted")
 
 if __name__ == "__main__":
-    originalTestingFunctionality()
+    # originalTestingFunctionality()
+    divideIntoFolders()
     # This function must be run directly inside the dir with all the .png files to be renamed
     #### renameToHexAllFiles()
