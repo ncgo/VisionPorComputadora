@@ -12,7 +12,8 @@ A01194204@itesm.m
 26/03/2021
 """
 import requests
-from selenium.webdriver import Chrome
+from selenium import webdriver
+#from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
@@ -35,11 +36,13 @@ def cleanDuplicates():
     global imgURL
     imgURL = list(dict.fromkeys(imgURL))
 
-def writeImgs(urls : list, trainPath : str, testPath : str):
+def writeImgs(urls : list, trainPath : str, testPath : str, validationPath : str):
     targetFolder = trainPath
     for x in range(len(urls)):
-        if(x > len(urls) * 0.8):
+        if(x > len(urls) * 2/3):
             targetFolder = testPath
+        elif (x > len(urls) * 5/6):
+            targetFolder = validationPath
         webImg = requests.get(urls[x])
         f = open(f"./{targetFolder}img_{x + 1}.png","wb")
         f.write(webImg.content)
@@ -52,7 +55,7 @@ def mainActivity(driver, currentHeight, targetNumImgs):
     new_height  = -1
     iters = 0
     toBottom = False
-    while len(imgURL) < targetNumImgs and iters < 20:
+    while len(imgURL) < targetNumImgs and iters < 200:
         # Wait to load page
         time.sleep(1)
 
@@ -84,9 +87,7 @@ def mainActivity(driver, currentHeight, targetNumImgs):
 if __name__ == "__main__":
     openBrowser = True
     try:
-        pathFile = open("pathFile.txt","r")
-        driver = Chrome(pathFile.readline())
-        pathFile.close()
+        driver = webdriver.Chrome(executable_path='C:\webdrivers\chromedriver.exe')
         driver.get(WEBSITE_URL)
         searchBar = driver.find_element_by_name("searchKeyword")
     except Exception:
@@ -109,7 +110,7 @@ if __name__ == "__main__":
     try:
         targetNumImgs = int(sys.argv[2])
     except IndexError:
-        targetNumImgs = 100
+        targetNumImgs = 400
 
     # Get scroll height
     last_height = driver.execute_script("return document.body.scrollHeight")
@@ -118,9 +119,11 @@ if __name__ == "__main__":
 
         trainFolder = f"train/{keyword}/"
         testFolder  = f"test/{keyword}/"
+        validationFolder  = f"validation/{keyword}/"
 
         deleteFolder(trainFolder)
         deleteFolder(testFolder)
+        deleteFolder(validationFolder)
         
         mainActivity(driver, last_height, targetNumImgs)
 
@@ -128,5 +131,6 @@ if __name__ == "__main__":
 
         createFolder(trainFolder)
         createFolder(testFolder)
+        createFolder(validationFolder)
 
-        writeImgs(imgURL,trainFolder,testFolder)
+        writeImgs(imgURL,trainFolder,testFolder,validationFolder)
