@@ -51,5 +51,5 @@ We recommend having a *venv* to install the dependencies independently.
 ---
 
 ### Recursos / Resources
-- [Webscraping Tutorial](https://realpython.com/beautiful-soup-web-scraper-python/)
+- [Fine Tunning](https://www.youtube.com/watch?v=Zrt76AIbeh4)
 
