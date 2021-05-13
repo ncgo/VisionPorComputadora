@@ -16,9 +16,9 @@
 - Descargar los archivos que estan en la carpeta de [data](https://github.com/ncgo/VisionPorComputadora/tree/main/Actividad3/data)
 - Si se requiere utilizar el WebScrapper, ver documentación [aquí](https://github.com/ncgo/VisionPorComputadora/blob/main/Actividad2/readme.md)
 
-- Have all required packages described on this repositories *requirements.txt* file
-- Download images on the [data](https://github.com/ncgo/VisionPorComputadora/tree/main/Actividad3/data) directory
-- If you must use the WebScrapper, see the documentation [here](https://github.com/ncgo/VisionPorComputadora/blob/main/Actividad2/readme.md)
+> - Have all required packages described on this repositories *requirements.txt* file
+> - Download images on the [data](https://github.com/ncgo/VisionPorComputadora/tree/main/Actividad3/data) directory
+> - If you must use the WebScrapper, see the documentation [here](https://github.com/ncgo/VisionPorComputadora/blob/main/Actividad2/readme.md)
 
 ---
 
