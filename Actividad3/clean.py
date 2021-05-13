@@ -27,7 +27,5 @@ def checkCleanUp():
             print(folder + ": " + len(files))
 
 if __name__ == "__main__":
-    # deleteExtra('validation', 'airplane')
-    # deleteExtra('train', 'car')
-    deleteExtra('validation', 'car')
+    deleteExtra('test', 'car')
     checkCleanUp()
