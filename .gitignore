@@ -7,3 +7,6 @@ env/
 
 **.zip
 **.pdf
+
+ProyectoFinal/data/
+!ProyectoFinal/data_download_link.txt
