@@ -1,0 +1,43 @@
+#Stream-body{
+    margin: 0;
+    padding: 0;
+    background: url("../static/img/bg.jpg");
+    background-size: cover;
+}
+#Stream-text{
+    text-align: center; 
+    color: #fff;
+}
+#bg {
+    width:35%;
+    transform: translate(92%,0);
+}
+
+#analyze{
+    border: none;
+    background: #9f8066;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    align-self: flex-end;
+    transform: translate(0px, 80%);
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#analyze:hover {
+    background: #fff;
+    color: #9f8066 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,1);
+    transition: all 0.3s ease 0s;
+}
