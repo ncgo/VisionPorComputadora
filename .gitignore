@@ -9,4 +9,5 @@ env/
 **.pdf
 
 ProyectoFinal/data/
+ProyectoFinal/model/
 !ProyectoFinal/data_download_link.txt
