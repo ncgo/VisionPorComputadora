@@ -1,9 +1,4 @@
-from base64 import b64decode, b64encode
 import cv2
-import numpy as np
-import PIL
-import io
-import time
 # import darknet functions to perform object detections
 from darknet import *
 
