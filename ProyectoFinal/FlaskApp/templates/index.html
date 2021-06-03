@@ -7,12 +7,17 @@
     <title>Flask App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/index.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript> $(function() { $("#test").click(function (event) { $.getJSON('/test', { },
+    function(data) { }); return false; }); }); </script> 
 </head>
 <body id="Stream-body">
     <h1 id = "Stream-text"> Food sorter </h1>
     <img id="bg" src="{{ url_for('video_feed') }}">
     <div id="btn">
         <button type="button" class="btn btn-primary" id="analyze">Analyze</button>
+        <button type="button" class="btn btn-primary" id="test">Test</button>
     </div>
     {{JSGlue.include()}}
     <script>

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, Response, redirect, url_for
 from camera import VideoCamera
+from DarknetNetwork.darknet_module import set_bounding_boxes
 import pyzbar.pyzbar as pyzbar 
 from flask_cors import CORS
 from flask_restful import Resource, Api
@@ -34,6 +35,11 @@ def gen(camera):
 def video_feed():
     return Response(gen(VideoCamera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route("/test")
+def test():
+    print(set_bounding_boxes(None))
+    return "Hello World"
 
 # class index(Resource):
 #     def get(self):
