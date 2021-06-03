@@ -13,7 +13,6 @@ import sys
 
 app = Flask(__name__)
 jsglue = JSGlue(app)
-
 image = None
 
 api = Api(app)
@@ -38,7 +37,6 @@ def video_feed():
 
 @app.route("/test")
 def test():
-    print(set_bounding_boxes(None))
     return "Hello World"
 
 # class index(Resource):
