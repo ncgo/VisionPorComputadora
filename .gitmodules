@@ -1,3 +1,0 @@
-[submodule "ProyectoFinal/FlaskApp/DarknetNetwork/darknet"]
-	path = ProyectoFinal/FlaskApp/DarknetNetwork/darknet
-	url = git@github.com:JOmarCuenca/darknet.git
