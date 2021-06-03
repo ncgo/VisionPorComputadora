@@ -1,6 +1,6 @@
 import cv2
 # import darknet functions to perform object detections
-from .darknet import *
+from darknet import *
 
 # load in our YOLOv4 architecture network
 network, class_names, class_colors = load_network("DarknetNetwork/model/yolov4-obj.cfg", "DarknetNetwork/model/obj.data", "DarknetNetwork/model/yolov4-obj_best.weights")
