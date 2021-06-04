@@ -1,6 +1,6 @@
 import cv2
 # import darknet functions to perform object detections
-from .darknet import *
+from darknet import *
 
 # load in our YOLOv4 architecture network
 network, class_names, class_colors = load_network("DarknetNetwork/model/yolov4-obj.cfg", "DarknetNetwork/model/obj.data", "DarknetNetwork/model/yolov4-obj_best.weights")
@@ -10,7 +10,7 @@ height = network_height(network)
 # darknet helper function to run detection on image
 def darknet_helper(img, width, height):
   darknet_image = make_image(width, height, 3)
-  # img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+  img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
   img_resized = cv2.resize(img, (width, height),
                               interpolation=cv2.INTER_LINEAR)
 
@@ -27,7 +27,6 @@ def darknet_helper(img, width, height):
 
 def set_bounding_boxes(img):
   detections, width_ratio, height_ratio = darknet_helper(img, width, height)
-  print(f"The amount of fruits that I found was {len(detections)}")
   for label, confidence, bbox in detections:
       left, top, right, bottom = bbox2points(bbox)
       left, top, right, bottom = int(left * width_ratio), int(top * height_ratio), int(right * width_ratio), int(bottom * height_ratio)
@@ -35,7 +34,6 @@ def set_bounding_boxes(img):
       cv2.putText(img, "{} [{:.2f}]".format(label, float(confidence)),
                           (left, top - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                           class_colors[label], 2)
-  return detections, img
 
 if __name__ == "__main__":
 
@@ -55,10 +53,14 @@ if __name__ == "__main__":
         if frame is None:
             break
         # Display the resulting frame
-        # set_bounding_boxes(frame)
+        set_bounding_boxes(frame)
         cv2.imshow('video_feed',frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
+    
+    # set_bounding_boxes(frame)
+    # cv2.imshow("Captured Img", frame)
+    # cv2.waitKey(1)
     cap.release()
     cv2.destroyAllWindows()
