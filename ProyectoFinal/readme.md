@@ -23,6 +23,9 @@
 > - Run the app on the terminal with `app.py`
 
 ---
+Puede encontrar el set de datos utilizado para entrenar la red [aquí](https://drive.google.com/drive/folders/15XuMaFoyTP4dRGlRQTD3rUKZoZ8_qTcQ)
+Data set used for training the network can be found [here](https://drive.google.com/drive/folders/15XuMaFoyTP4dRGlRQTD3rUKZoZ8_qTcQ)
+---
 
 ### ¿Qué hace este proyecto? / What does this project do?
 Este proyecto consta de una web app con base de una red neuronal basada en la arquitectura de YOLO que es capaz de identificiar y clasificar distintas frutas y verduras, con posibles aplicaciones en supermercados para las cajas de auto cobro.
@@ -45,4 +48,7 @@ Este proyecto es útil para poder agilizar la experiencia del usuario al momento
 `$ pip install -r requirements.txt`
 
 ---
+
+Encuentre el reporte generado para este Proyecto [aqui](https://docs.google.com/document/d/17AOtoYrJjgAKILf2YpfrkVe_jM9DTaGtF2OwQtuIIpY/edit?usp=sharing)
+Read the report generated for this project [here](https://docs.google.com/document/d/17AOtoYrJjgAKILf2YpfrkVe_jM9DTaGtF2OwQtuIIpY/edit?usp=sharing)
 
