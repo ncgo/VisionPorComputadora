@@ -9,4 +9,6 @@ env/
 **.pdf
 
 ProyectoFinal/data/
+ProyectoFinal/model/
+ProyectoFinal/FlaskApp/data
 !ProyectoFinal/data_download_link.txt
