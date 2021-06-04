@@ -3,11 +3,48 @@
     padding: 0;
     background: url("../static/img/bg.jpg");
     background-size: cover;
+    height: 100vh;
+    font-family: 'Reenie Beanie', cursive;
 }
+
+#navbarToggleExternalContent {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbarToggleExternalContent h6 {
+    color: rgb(124, 156, 115);
+}
+
+#navbarapp {
+    background-color: rgb(124, 156, 115);
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(228, 228, 153);
+}
+
+#header {
+    background-color: rgba(27, 38, 59, 0.9);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #Stream-text{
     text-align: center; 
     color: #fff;
+    font-size: 5rem;
 }
+
+#Stream-text:hover{
+    text-align: center; 
+    color: rgb(206, 87, 35);
+    font-size: 5rem;
+}
+
 #bg {
     width:35%;
     transform: translate(92%,0);
@@ -22,6 +59,7 @@
     transition: all 0.3s ease 0s;
     align-self: flex-end;
     transform: translate(0px, 80%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #btn{
@@ -32,7 +70,7 @@
 
 #analyze:hover {
     background: #fff;
-    color: #9f8066 !important;
+    color: rgb(27, 38, 59)!important;
     font-weight: 700 !important;
     letter-spacing: 3px;
     background: none;
@@ -40,4 +78,51 @@
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,1);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,1);
     transition: all 0.3s ease 0s;
+}
+
+#footer {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(27, 38, 59);
+    position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#github {
+    color: white;
+}
+
+#github:hover {
+    color: rgb(206, 87, 35);
+}
+
+#box-resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultado {
+    text-align: center;
+    background-color: rgb(206, 87, 35);
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#resultado p {
+    color: white;
+    font-size: 2rem;
+}
+
+#resultado #prediccion {
+    color: rgb(27, 38, 59);
+    font-size: 1.5rem;
 }
