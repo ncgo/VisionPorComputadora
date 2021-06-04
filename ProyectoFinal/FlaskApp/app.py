@@ -10,21 +10,47 @@ import time
 import json
 import logging
 import sys
+from PIL import Image
+import base64
+import io
 
 app = Flask(__name__)
 jsglue = JSGlue(app)
 image = None
-
 api = Api(app)
+capture = True
 CORS(app)
 
 
 @app.route('/')
 def index():
+    capture = True
     return render_template('index.html')
 
+def tagFormatter(detections):
+    if len(detections) < 1:
+        return "Found nothing"
+    return detections[0][0]
+
+@app.route('/capture')
+def renderImg():
+    global capture
+    capture = False
+    labels = set_bounding_boxes(image)
+    print(labels)
+    im = Image.fromarray(image)
+    data = io.BytesIO()
+    im.save(data, "JPEG")
+    encoded_img_data = base64.b64encode(data.getvalue())
+    capture=True
+    return render_template(
+        "renderCapture.html", 
+        captured_img=encoded_img_data.decode('utf-8'),
+        labels=tagFormatter(labels)
+    )
+
 def gen(camera):
-    while True:
+    while True and capture:
         global image
         frame, image = camera.get_frame()
         yield (b'--frame\r\n'
@@ -32,12 +58,10 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(VideoCamera()),
+    if capture :
+        return Response(gen(VideoCamera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
-
-@app.route("/test")
-def test():
-    return "Hello World"
+    return "none"
 
 # class index(Resource):
 #     def get(self):
