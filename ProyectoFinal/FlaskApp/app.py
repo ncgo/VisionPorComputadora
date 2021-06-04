@@ -16,6 +16,7 @@ import base64
 import io
 
 app = Flask(__name__)
+app.static_folder = "static"
 jsglue = JSGlue(app)
 image = None
 frame = None
