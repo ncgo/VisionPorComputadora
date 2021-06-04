@@ -27,7 +27,6 @@ def darknet_helper(img, width, height):
 
 def set_bounding_boxes(img):
   detections, width_ratio, height_ratio = darknet_helper(img, width, height)
-  print(f"The amount of fruits that I found was {len(detections)}")
   for label, confidence, bbox in detections:
       left, top, right, bottom = bbox2points(bbox)
       left, top, right, bottom = int(left * width_ratio), int(top * height_ratio), int(right * width_ratio), int(bottom * height_ratio)
@@ -35,7 +34,7 @@ def set_bounding_boxes(img):
       cv2.putText(img, "{} [{:.2f}]".format(label, float(confidence)),
                           (left, top - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                           class_colors[label], 2)
-  return detections, img
+  return detections
 
 if __name__ == "__main__":
 

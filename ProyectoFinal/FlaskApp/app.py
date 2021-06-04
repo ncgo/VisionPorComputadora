@@ -56,9 +56,8 @@ def tagFormatter(detections):
 def renderImg():
     global capture
     capture = False
-    im = Image.frombytes("L", (3, 2), frame)
-    print(np.array(im.getdata()))
-    labels, bbImg = set_bounding_boxes(np.array(im.getdata()))
+    labels = set_bounding_boxes(image)
+    im = Image.fromarray(image)
     data = io.BytesIO()
     im.save(data, "JPEG")
     encoded_img_data = base64.b64encode(data.getvalue())
